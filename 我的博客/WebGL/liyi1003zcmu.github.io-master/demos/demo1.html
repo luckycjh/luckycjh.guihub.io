@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<title>任务d</title>
+		<!-- 顶点着色器和片元着色器代码 -->
+		<script id="vertex-shader" type="x-shader/x-vertex">
+			/*
+				attribute定义了一个vec4四维变量,用于表示每个顶点的位置信息,gl_Position代表顶点的位置,
+			a_position是着色器用于接收来自JavaScript代码的顶点位置信息的入口.
+			*/
+			attribute vec4 vPosition;
+			attribute vec4 a_Color;
+			varying vec4 v_Color;
+			void main(){
+				gl_Position = vPosition;
+				v_Color = a_Color;
+			}
+		</script>
+		<script id="fragment-shader" type="x-shader/x-fragment">
+			precision mediump float; //将精度设置为中等精度
+			varying vec4 v_Color;
+			void main(){
+				gl_FragColor = v_Color;
+			}
+		</script>
+		<!-- 一组相关的JS库 -->
+		<script type="text/javascript" src="../js/common/webgl-utils.js"></script>
+		<script type="text/javascript" src="../js/common/initShaders.js"></script>
+		<script type="text/javascript" src="../js/common/gl-matrix-min.js"></script>
+		<!-- 绘制三角形的JS代码 -->
+		<script type="text/javascript" src="../js/ch01/triangle1.js"></script>
+	</head>
+	<body>
+		<div align="center" style="margin-top: 100px">
+			<canvas id="triangle-canvas" style="border:none;" width="500" height="500"></canvas>
+		</div>
+	</body>
+</html>
