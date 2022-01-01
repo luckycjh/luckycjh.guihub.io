@@ -57,7 +57,7 @@ General CSS
 									
 #content {
 	width: 720px;
-	padding-top: 170px;
+	padding-top: 50px;
 	margin-left: 240px;
 	z-index: 1;
 }
@@ -333,7 +333,7 @@ Header & Menu CSS
 	height: 100%;
 	padding-top: 120px;
 	float: left;
-	width: 140px;
+	width: px;
 }
 #main-menu {
 	position: fixed;
@@ -606,7 +606,7 @@ About us CSS
 	text-align: justify;
 }
 .team-text {
-	text-align: center;
+	/* text-align: center; */
 }
 /******************************************************************
 Portfolio CSS

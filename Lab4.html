@@ -35,7 +35,7 @@
     <div id="logo"><a href="index.html"><img src="images/logo.png" width="100" height="80" alt="logo" /></a></div>
     <div id="header-text">
       <h4>So want to know more about our creative team?</h4>
-      <h6><a href="index.html">Home</a> → Lab1</h6>
+      <h6><a href="index.html">Home</a> → Lab2</h6>
     </div>
   </div>
 </div>
@@ -46,9 +46,12 @@
     <ul>
       <li><a class="selected" href="index.html">Home</a></li>
       <li><a href="Lab0.html">Lab0</a></li>
-      <li><a href="Lab1.html">Lab1  →</a></li>
+      <li><a href="Lab1.html">Lab1</a></li>
       <li><a href="Lab2.html">Lab2</a></li>
       <li><a href="Lab3.html">Lab3</a></li>
+      <li><a href="Lab4.html">Lab4  →</a></li>
+			<li><a href="Lab5.html">Lab5</a></li>
+			<li><a href="Lab6.html">Lab6</a></li>
       <li><a href="More.html">More</a></li>
     </ul>
   </div>
@@ -73,20 +76,42 @@
 <!--This is the START of the content-->
 <div id="content">
   <div class="spacer"></div>
-  <div class="team-text">
+  <br class="team-text">
     <h5>实验要求：</h5>
-       <p> 任务a. 修改三角形的显示颜色，比如改成蓝色或绿色</p>
-         <a href="./demos/ch1/task-a.html">任务a</a>
-       <p>任务b. 绘制一个四边形，颜色可任意设置为除红色之外的颜色</p>
-        <a href="./demos/ch1/task-b.html">任务b</a>
-       <p>任务c. 同时绘制一个三角形和一个四边形，将两者设置为相同的颜色，要求同上</p>
-        <a href="./demos/ch1/task-c.html">任务c</a>
-       <p>任务d. 将任务c中的三角形和四边形设置为不同的颜色</p>
-         <a href="./demos/ch1/task-d.html">任务d</a>
-       <p>任务e1. 绘制如下图所示效果的三角形，三角形大小可变，颜色按照示例</p>
+    <p id="21-重复教材上的代码完成旋转的立方体">2.1 重复教材上的代码，完成旋转的立方体</p>
+    <ul>
+      <li>任务a. 实现教材上的例题代码，通过三个按键选择旋转方向，绘制旋转的立方体</li>
+      <li>任务b. 添加控制，实现旋转的立方体分别在X, Y, Z三条轴向上的平移，控制和平移参数的实现形式不限</li>
+      <li>任务c. 添加控制，实现旋转的立方体分别沿X, Y, Z三条轴向上的缩放，控制和缩放参数的实现形式不限</li>
+      <li>任务d. 将旋转的控制方式改为鼠标模拟的跟踪球</li>
+    </ul>
+    <a href="./demos/ch4/task1.html">任务a</a>
+    
+    <p id="22-画n个立方体">2.2 画N个立方体？</p>
+    <ul>
+      <li>任务e. 设计画布界面和场景，完成以下功能：
+        <ul>
+          <li>场景中可以添加的元素包括：立方体、正三角形、正方形、圆</li>
+          <li>用户在画布场景中点击鼠标时，在相应鼠标点击位置绘制所选择对象：
+            <ol>
+              <li>如果为<strong><em>正三角形</em></strong>，需持续放大缩小并循环，比如缩放参数可在0.5-2之间来回往复变化，具体数值可自由设定</li>
+              <li>如果为<strong><em>正方形</em></strong>，需持续绕Z轴转动，大小，速度可自行设定</li>
+              <li>如果为<strong><em>立方体</em></strong>，需持续绕某一特定轴转动，要求是任一时刻都能看到至少两个面</li>
+              <li>如果为<strong><em>圆</em></strong>，需在XOY平面上作随机平移，速度和位移值可自行设定</li>
+            </ol>
+          </li>
+          <li>正三角形、正方形、圆、立方体分别用一个按键或者菜单实现相应选择</li>
+          <li>绘制圆时，用滑动条控制圆的边数</li>
+          <li>用按键实现场景清空功能</li>
+          <li>绘制每个对象时，颜色通过颜色选择器实现</li>
+          <li>提示，多个元素可动画可采用多个着色器程序多个缓存实现</li>
+        </ul>
+      </li>
+    </ul>
 
-     
-      
+   
+            <a href="./demos/ch4/task2.html">任务b</a>
+        
       
      
   </div>

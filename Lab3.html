@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Lab3</title>
+<title>Lab1</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <!-- Load CSS -->
 <link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -26,25 +26,6 @@
 <script type="text/javascript" src="scripts/jquery.easing-1.3.pack.js"></script>
 <script type="text/javascript" src="scripts/jquery.mousewheel-3.0.4.pack.js"></script>
 <link rel="stylesheet" href="css/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
-<!-- Load contact check -->
-<script type="text/javascript">
-function MM_validateForm() { //v4.0
-  if (document.getElementById){
-    var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
-    for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
-      if (val) { nm=val.name; if ((val=val.value)!="") {
-        if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
-          if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
-        } else if (test!='R') { num = parseFloat(val);
-          if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
-          if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
-            min=test.substring(8,p); max=test.substring(p+1);
-            if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
-      } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
-    } if (errors) alert('We are sorry, but there is an error:\n'+errors);
-    document.MM_returnValue = (errors == '');
-} }
-</script>
 </head>
 <body>
 <!--This is the START of the header-->
@@ -53,65 +34,71 @@ function MM_validateForm() { //v4.0
   <div id="header">
     <div id="logo"><a href="index.html"><img src="images/logo.png" width="100" height="80" alt="logo" /></a></div>
     <div id="header-text">
-      <h4>Drop us a line, we don't bite!</h4>
-      <h6><a href="index.html">Home</a> → Lab3</h6>
+      <h4>So want to know more about our creative team?</h4>
+      <h6><a href="index.html">Home</a> → Lab2</h6>
     </div>
   </div>
 </div>
 <!--END of header-->
 <!--This is the START of the menu-->
 <div id="menu-wrapper">
-  <div id="main-menu">
+    <div id="main-menu">
     <ul>
-   <li><a href="Lab0.html">Lab0</a></li>
+      <li><a class="selected" href="index.html">Home</a></li>
+      <li><a href="Lab0.html">Lab0</a></li>
       <li><a href="Lab1.html">Lab1</a></li>
-      <li><a href="Lab2.html">Lab2</a></li>
-      <li><a href="Lab3.html">Lab3  →</a></li>
-      <li><a href="More.html">More</a></li>
+      <li><a href="Lab2.html">Lab2  →</a></li>
+      <li><a href="Lab3.html">Lab3</a></li>
+      <li><a href="Lab4.html">Lab4</a></li>
+			<li><a href="Lab5.html">Lab5</a></li>
+			<li><a href="Lab6.html">Lab6</a></li>
+			<li><a href="More.html">More</a></li>
     </ul>
   </div>
-	<!--This is the START of the footer-->
-	<div id="footer">
-		<div id="social-box">
-			<ul>
-				<li>
-					<div class="facebook"><a href="#"></a></div>
-				</li>
-				<li>
-					<div class="twitter"><a href="#"></a></div>
-				</li>
-				<li>
-					<div class="rss"><a href="#"></a></div>
-				</li>
-			</ul>
-		
-	<!--END of footer-->
+  <!--This is the START of the footer-->
+  <div id="footer">
+    <div id="social-box">
+      <ul>
+        <li>
+          <div class="facebook"><a href="#"></a></div>
+        </li>
+        <li>
+          <div class="twitter"><a href="#"></a></div>
+        </li>
+        <li>
+          <div class="rss"><a href="#"></a></div>
+        </li>
+      </ul>
+    
+  <!--END of footer-->
 </div>
 <!--END of menu-->
 <!--This is the START of the content-->
 <div id="content">
-  <!--This is the START of the contact section-->
-  <div id="contact">
-    
-  </div>
+  <div class="spacer"></div>
+  <br class="team-text">
+    <h5>实验要求：</h5>
 
-  <div id="contactinfo">
+       <p> 任务a.复刻旋转的正方形示例，可选择包括正方形在内的各种形状，可自选实现通过两种交互控制方式实现交互控制，要求其中之一为页面控件，如按钮、选择菜单等，另一种为鼠标或键盘按键事件，实现效果见本章各demo:</p>
+        <br>
+             <a href="./demos/ch3/task1.html">任务a</a>
+      <br><br>
+       <p>任务b. 还记得自己的那幅画吗？请用代码忠实重现此画，并将其转换成一段动画。：</p>
+       <ul>
+        <li>动画实现具体形式不限，不一定是全部画面元素，可以是其中的一种或几种，动画实现时长不限，只要符合画面的主题即可</li>
+        <li>至少包含一种交互行为，具体形式内容不限，可以是鼠标事件，键盘事件，或者摄像头事件，或者其它交互设备均可，也可在页面中添加各种交互输入元素，关于交互行为的具体实现控制方法，请在代码中用注释加以说明</li>
+        <li>考虑到之前各位实现的绘画形式多样，主题多种，如果画面重现有困难，请尽可能按照图画的思路实现简化版本，但不允许出现重现的画面和动画与之前的画图完全不符的情况</li>
+      </ul>
+
+   
+            <a href="./demos/ch3/task2.html">任务b</a>
+        
+      
+     
+  </div>
+  <div class="spacer"></div>
+  <div class="about">
+   
     
-  <!--END of contact section-->
-</div>
-<!--END of content-->
-<p class="slide"><a href="#" class="btn-slide"></a></p>
-<div id="slide-panel">
-	<!--This is the START of the follow section-->
-	<div id="follow">
-		
-		</div>
-		</a><a href="#">
-		
-		</a>
-		
-	</div>
-	<!--END of follow section-->
-</div>
 </body>
 </html>
