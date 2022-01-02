@@ -1,53 +1,79 @@
-<!DOCTYPE html>
-<html>
-
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-        <title>实验三-02</title>
-        <style>
-            html,body{
-                width: 100%;
-            }
-        </style>
-        <script id="rot-v-shader" type="x-shader/x-vertex">
-            attribute vec4 vPosition;
-            attribute vec4 a_Color;
-			varying vec4 v_Color;
-            uniform float theta;
-
-            void main()
-            {
-
-                float u = cos(theta);
-                float v = sin(theta);
-                gl_Position.x = vPosition.x * u - vPosition.y * v;
-                gl_Position.y = vPosition.x * v + vPosition.y * u;
-                gl_Position.z = 0.0;
-                gl_Position.w = 1.0;
-                v_Color = a_Color;
-            }
-        </script>
-
-        <script id="rot-f-shader" type="x-shader/x-fragment">
-            precision mediump float;
-            varying vec4 v_Color;
-            void main(){
-                gl_FragColor = v_Color;
-            }
-        </script>
-        <script type="text/javascript" src="./common/jquery-3.6.0.min.js"></script>
-        <script type="text/javascript" src="./common/webgl-utils.js"></script>
-        <script type="text/javascript" src="./common/initShaders.js"></script>
-        <script type="text/javascript" src="./common/gl-matrix-min.js"></script>
-        <script type="text/javascript" src="./js/task2.js"></script>
-    </head>
-
-    <body onload="initRotSquare()">
-        <div align="center">
-            <canvas id="rot-canvas"width="800" height="800">你的浏览器不支持HTML5 canvas元素</canvas><br>
-            <input type="submit" width="50px" height="30px" onclick="f5()" value="刷新"/>
-            <input type="submit" width="50px" height="30px" onclick="renderSquare()" value="移动"/>
-        </div>
-    </body>
-
+<!doctype html>
+<html lang="en">
+ <!--网页头部信息-->
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="123">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>index（旋转正方体）</title>
+ 
+  <!--css 层叠样式 -->
+  <link rel="stylesheet" href="./task-b.css">
+ </head>
+ <body>
+	<!--  
+		旋转正方体思路：
+		创建大的矩形区域(class （.id）(格式)。)
+		大盒子里面创建小盒子
+				小盒子里面引入图片
+				图片大小设置一样
+	
+	-->
+	<div class ="bigbox"><!--div嵌套盒子-->
+			<div class="smallbox">	
+				<div class="smallbox1">
+					<div class="front1">
+						<img src="images/a.jpg">
+					</div>
+					<div class="back1">
+						<img src="images/b.jpg">
+					</div>
+					<div class="left1">
+						<img src="images/c.jpg">
+					</div>
+					<div class="right1">
+						<img src="images/d.jpg">
+					</div>
+					<div class="top1">
+						<img src="images/e.jpg">
+					</div>
+					<div class="bottom1">
+						<img src="images/f.jpg">
+					</div>
+				</div>
+				<!--正方体前面的图片-->
+					<div class="front">
+						<img src="images/7.jpg">
+					</div>
+					<!--正方体后面的图片-->
+					<div class="back">
+						<img src="images/8.jpg">
+					</div>
+					<!--正方体左面的图片-->
+					<div class="left">
+						<img src="images/9.jpg">
+					</div>
+					<!--正方体右面的图片-->
+					<div class="right">
+						<img src="images/10.jpg">
+					</div>
+					<!--正方体上面的图片-->
+					<div class="top">
+						<img src="images/11.jpg">
+					</div>
+					<!--正方体下面的图片-->
+					<div class="bottom">
+						<img src="images/12.jpg">
+				</div>		
+				
+			</div>
+	</div>
+	<div >
+	    <button id="jiasu" style="width: 100px;height: 50px; margin-top:80px;margin-left:550px" onclick="quick()">加速</button>
+        <button id="jiansu" style="width: 100px;height: 50px; margin-top:80px; margin-left:30px" onclick="slow()">减速</button>
+	</div>
+	</body>
 </html>
+
